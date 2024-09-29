@@ -1,4 +1,51 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+Start
+// Pseudo code for a number guessing game
+
+// Generate a random number between 1 and 10
+targetNumber = random(1, 10)
+
+// Initialize variables
+guess = 0
+attempts = 0
+maxAttempts = 3
+
+// Display instructions to the player
+display("Welcome to the Number Guessing Game!")
+display("I'm thinking of a number between 1 and 10.")
+display("You have 3 attempts to guess it.")
+
+// Start the game loop
+while attempts < maxAttempts:
+    // Prompt the player to enter a guess
+    display("Attempt " + (attempts + 1) + ": Enter your guess:")
+    guess = input()
+
+    // Validate the guess
+    if guess is not a valid number:
+        display("Invalid input. Please enter a valid number.")
+        continue
+
+    // Increment the attempt counter
+    attempts = attempts + 1
+
+    // Check if the guess is correct
+    if guess == targetNumber:
+        display("Congratulations! You guessed the number in " + attempts + " attempts.")
+        break
+    else if guess < targetNumber:
+        display("Too low. Try again.")
+    else:
+        display("Too high. Try again.")
+
+// If the player runs out of attempts
+if attempts >= maxAttempts:
+    display("Sorry, you've run out of attempts.")
+    display("The number I was thinking of was " + targetNumber + ".")
+
+// End of the game
+display("Thanks for playing!")
+
 
